@@ -1,0 +1,12 @@
+User-agent: *
+Disallow:
+Disallow: /404/
+Disallow: /404.html
+Disallow: /en/404.html
+Disallow: /en/404/
+Disallow: /ru/404.html
+Disallow: /ru/404/
+
+Host: https://wintotime.com
+
+Sitemap: https://wintotime.com/sitemap-index.xml
