@@ -15,7 +15,9 @@ jobs:
         
       - name: Gatsby Cache
         uses: jongwooo/gatsby-cache@v1.4.2
-
+        with:
+          branch: relese
+          folder: public
       
       - name: Install Node.js
         uses: actions/setup-node@v3
