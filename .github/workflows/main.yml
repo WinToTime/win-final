@@ -12,13 +12,7 @@ jobs:
     steps: 
       - name: Checkout Code
         uses: actions/checkout@v2.3.1
-        
-      - name: Gatsby Cache
-        uses: jongwooo/gatsby-cache@v1.4.2
-        with:
-          branch: relese
-          folder: public
-      
+              
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -26,12 +20,21 @@ jobs:
           
       - name: Install Project Dependencies
         run: npm ci
-        
+                
       - name: Install Gatsby CLI
         run: npm install -g gatsby-cli
         
+      - name: Make output folder
+        run: mkdir public
+        
       - name: Build
         run: gatsby build
+        
+      - name: Gatsby Cache
+        uses: jongwooo/gatsby-cache@v1.4.2
+        with:
+          branch: relese
+          folder: public
         
       - name: Verify build
         run: ls -la public
